@@ -279,8 +279,8 @@ body {
 }
 
 .grid-item img {
-    width: 50px;
-    height: auto;
+    width: 150px;
+    height:100px;
     margin-bottom: 10px;
 }
 
@@ -423,3 +423,5 @@ body {
   button a:hover{
     color:white;
   }
+
+  
