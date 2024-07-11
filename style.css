@@ -2,9 +2,10 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     height: auto;
+    background-color: #bad9c9;
 }
 .top-bar {
-    background:  #339966;
+    background:  #4da77a;
     color: white;
     padding: 5px 10px;
     font-size: 0.9em;
@@ -12,6 +13,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top:0;
     width: 100%;
     top: 0;
     left: 0;
@@ -29,176 +31,181 @@ body {
     margin: 0 5px;
     text-decoration: none;
 }
+
+
+/*  */
+
 .green-bar {
-    background: whitesmoke;
-    height: 80px;
-    position:fixed;
-    top:0;
+    top:30px;
+    position: fixed;
+ /* Adjust based on the height of the top bar */
     width: 100%;
-    top: 30px; /* Adjusted to the height of the top bar */
-    left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    color: white;
-    font-size: 1.2em;
-    z-index: 999;
-    border-bottom: 0.3 solid black;
+    background-color: white; /* You can change this to your desired color */
+    padding: 10px 0; /* Adjust padding as needed */
+    box-sizing: border-box;
+    z-index: 999; /* Ensure it's below the top bar */
 }
 
-.green-bar a{
+.green-bar a {
     text-decoration: none;
-    margin: 40px;
-    color: black;
-}
-.content {
-    margin-top: 110px; /* Adjusted for the combined height of the top bar and green bar */
-    padding: 20px;
-}
-@media (max-width: 600px) {
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .top-bar .left, .top-bar .right {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-    .top-bar .left span, .top-bar .right a {
-        margin-right: 0;
-        margin-top: 5px;
-    }
-    .top-bar .right {
-        align-items: flex-start;
-        margin-top: 5px;
-    }
-    .green-bar {
-        display: none;
-    }
-    .content {
-        margin-top: 55px; /* Adjusted for the height of the top bar only */
-    }
+    color: black; /* Change this to your desired text color */
+    display: flex;
+    font-size: 20px;;
+    align-items: center;
+    margin: 0 15px; /* Adjust margin to control spacing between items */
 }
 
-
-.first-content {
-position: static;
-margin-top: 40px;
-display: flex;
-width: 80%;
-flex-direction: row;
-flex-wrap: wrap;
-height: 70vh;
+.green-bar a img {
+    margin-right: 5px; /* Adjust margin to control spacing between image and text */
 }
 
-.first-content img {
-width: 100%;
-height: inherit;
-}
-
-.first-content div {
-width: 50%;
-height: inherit;
-}
-
-.first-content h2 {
-font-size:30px;
-margin-bottom: 20px;
-
+.green-bar a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-.first-content {
-flex-direction: column;
-height: auto;
+    .green-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .green-bar a {
+        flex: 1 1 45%; /* Two items per row */
+        margin: 10px;
+        justify-content: center;
+    }
+
+    .green-bar a img {
+        margin-right: 10px; /* Adjust as needed */
+    }
 }
-.first-content div {
-width: 100%;
-height: auto;
-}
-.first-content img {
-margin-top: 20px;
-}
+
+@media (max-width: 480px) {
+    .green-bar a {
+        flex: 1 1 100%; /* One item per row */
+        text-align: center;
+    }
 }
 
 
 
-
-.our-service{
-display: flex;
-flex-direction: column;
-justify-content:center;
-align-items: center;
+.first-content, .second-content {
+    background-color:whitesmoke;
+    position: static;
+    margin-top:30px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
 }
 
+.first-content img, .second-content img {
+    width: 100%;
+    height: auto;
+}
+
+.first-content div, .second-content div {
+    width: 50%;
+    padding: 10px;
+}
+
+.first-content h2, .second-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .first-content, .second-content {
+        flex-direction: column;
+    }
+    .first-content div, .second-content div {
+        width: 100%;
+    }
+    .first-content img, .second-content img {
+        margin-top: 20px;
+    }
+}
+
+.our-service {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
 
 .card-container {
-display: flex;
-justify-content: space-between;
-width: 90%;
-max-width: 1200px;
-margin:10px ;
-border-radius:20px;
-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 5px auto;
+    border-radius: 20px;
 }
 
 .card {
-background-color: white;
-border-radius: 8px;
-box-shadow: 0 6px 10px rgba(0,0,0,0.1);
-width: 30%;
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-overflow: hidden;
-border-radius:20px;
-margin-top: 10px;
+    background-color: white;
+    border-radius: 20%;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    width: 30%;
+    min-width: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: none;
 }
 
 .card-top {
-background-color: #53c089;
-height:140px;
-border-radius: 0px 0px 80% 80%;
+    background-color: #53c089;
+    height: 140px;
+    border-radius: 0px 0px 80% 80%;
 }
 
 .card-title {
-font-size: 1.5em;
-text-align: center;
-padding: 10px;
-
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
 }
 
 .card-content {
-padding: 10px;
-flex-grow: 1;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-content p {
-margin: 0;
+    margin: 0;
 }
 
 .card-content a {
-color:  #339966;
-text-decoration: none;
-align-self: flex-start;
-margin-top: 10px;
+    color: #339966;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
-.card-container {
-flex-direction: column;
-align-items: center;
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
-.card {
-width: 80%;
-margin-bottom: 20px;
-}
-}
-
 
 
 .section {
