@@ -4,8 +4,9 @@ body {
     height: auto;
     background-color: #bad9c9;
 }
+
 .top-bar {
-    background:  #4da77a;
+    background: #4da77a;
     color: white;
     padding: 5px 10px;
     font-size: 0.9em;
@@ -13,53 +14,51 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top:0;
-    width: 100%;
     top: 0;
+    width: 100%;
     left: 0;
     z-index: 1000;
 }
+
 .top-bar .left, .top-bar .right {
     display: flex;
     align-items: center;
 }
+
 .top-bar .left span {
     margin-right: 15px;
 }
+
 .top-bar a {
     color: white;
     margin: 0 5px;
     text-decoration: none;
 }
 
-
-/*  */
-
 .green-bar {
-    top:30px;
     position: fixed;
- /* Adjust based on the height of the top bar */
+    top: 40px; /* Adjust based on the height of the top bar */
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; /* You can change this to your desired color */
-    padding: 10px 0; /* Adjust padding as needed */
+    background-color: white;
+    padding: 10px 0;
     box-sizing: border-box;
     z-index: 999; /* Ensure it's below the top bar */
 }
 
 .green-bar a {
     text-decoration: none;
-    color: black; /* Change this to your desired text color */
+    color: black;
     display: flex;
-    font-size: 20px;;
+    font-size: 20px;
     align-items: center;
-    margin: 0 15px; /* Adjust margin to control spacing between items */
+    margin: 0 15px;
 }
 
 .green-bar a img {
-    margin-right: 5px; /* Adjust margin to control spacing between image and text */
+    margin-right: 5px;
 }
 
 .green-bar a:hover {
@@ -79,7 +78,7 @@ body {
     }
 
     .green-bar a img {
-        margin-right: 10px; /* Adjust as needed */
+        margin-right: 10px;
     }
 }
 
@@ -92,10 +91,11 @@ body {
 
 
 
+
 .first-content, .second-content {
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     position: static;
-    margin-top:30px;
+    margin-top: 30px;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -111,6 +111,7 @@ body {
 .first-content div, .second-content div {
     width: 50%;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .first-content h2, .second-content h2 {
@@ -183,6 +184,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .card-content p {
@@ -207,9 +209,8 @@ body {
     }
 }
 
-
 .section {
-    border: 1px solid  #339966;
+    border: 1px solid #339966;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -223,11 +224,13 @@ body {
     width: 20%;
     height: 50vh;
     margin-right: 20px;
+    box-sizing: border-box;
 }
 
 .section .info {
     width: 35%;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .section .info ul {
@@ -257,13 +260,13 @@ body {
 
 
 
-
 .card-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 20px;
-    margin-top:60px;
-   
+    margin-top: 60px;
+    gap: 20px; /* Added to provide spacing between grid items */
+    box-sizing: border-box;
 }
 
 .grid-item {
@@ -275,12 +278,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border:1px solid  #339966 ;
+    border: 1px solid #339966;
+    box-sizing: border-box;
 }
 
 .grid-item img {
     width: 150px;
-    height:100px;
+    height: 100px;
     margin-bottom: 10px;
 }
 
@@ -322,14 +326,15 @@ body {
     justify-content: space-between;
     padding: 20px;
     background-color: #f1f1f1;
-    
+    box-sizing: border-box;
 }
 
 .footer-column {
     flex: 1;
     min-width: 200px;
     margin: 10px;
-    margin-top:50px;
+    margin-top: 50px;
+    box-sizing: border-box;
 }
 
 .footer-column b {
@@ -359,69 +364,69 @@ body {
     }
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
 }
 
-.flex{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-
-
 .container1 {
     height: 30vh;
     width: 100%;
-    overflow: hidden; /* Hides overflow content */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-  }
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
 
-  .container1 img {
-    margin: 0 10px; /* Spacing between images */
-    max-height: 100%; /* Ensure images do not exceed container height */
-    animation: scroll 20s linear infinite; /* Animation for scrolling */
-  }
+.container1 img {
+    margin: 0 10px;
+    max-height: 100%;
+    animation: scroll 20s linear infinite;
+}
 
-  @keyframes scroll {
+@keyframes scroll {
     0% {
-      transform: translateX(0); /* Start position */
+        transform: translateX(0);
     }
     100% {
-      transform: translateX(-100%); /* End position */
+        transform: translateX(-100%);
     }
-  }
+}
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
     .container1 img {
-      max-height: 80%; /* Adjust image size for smaller screens */
+        max-height: 80%; /* Adjust image size for smaller screens */
     }
-  }
+}
 
-
-  button a{
-    text-decoration:none;
-    color:  #339966;
+button a {
+    text-decoration: none;
+    color: #339966;
     margin: 5px;
-  }
+}
 
-  button{
-    border:1px solid  #339966;
+button {
+    border: 1px solid #339966;
     margin: 20px;
-  }
+    padding: 10px 20px; /* Adding padding for better appearance */
+    background: none; /* Ensure no background color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-sizing: border-box; /* Ensure padding and border are included in total width and height */
+}
 
-  button:hover{
-    background-color:  #339966;
+button:hover {
+    background-color: #339966;
     color: white;
-  }
+}
 
-  button a:hover{
-    color:white;
-  }
-
-  
+button a:hover {
+    color: white;
+}
