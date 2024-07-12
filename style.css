@@ -53,6 +53,7 @@ body {
 
     .top-bar .right {
         display: none;
+        
     }
 
     .top-bar a {
@@ -63,21 +64,22 @@ body {
 
 
 
-
 .green-bar {
-    position:fixed;
-    top: 20px; /* Adjust based on the height of the top bar */
+    top:30px;
+    position:absolute;
+ /* Adjust based on the height of the top bar */
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    flex-direction:row;
-    padding: 10px 0;
+    background-color: whitesmoke; /* You can change this to your desired color */
+    padding: 10px 0; /* Adjust padding as needed */
     box-sizing: border-box;
-    min-height: 40px;
     z-index: 999; /* Ensure it's below the top bar */
 }
+
+
 
 .green-bar a {
     text-decoration: none;
@@ -90,15 +92,9 @@ body {
 
 @media (max-width: 768px) {
     .green-bar {
-        top: calc(40px + 70px); /* Adjust based on the height of the expanded top bar */
+        top: calc(10px + 70px); /* Adjust based on the height of the expanded top bar */
     }
 }
-
-
-
-
-
-
 
 
 
