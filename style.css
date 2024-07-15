@@ -101,13 +101,13 @@ body {
 
 .first-content, .second-content {
     background-color: whitesmoke;
-    position: static;
+    position: relative;
     margin-top: 30px;
     display: flex;
-    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    height: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .first-content img, .second-content img {
@@ -116,7 +116,8 @@ body {
 }
 
 .first-content div, .second-content div {
-    width: 50%;
+    
+    width:50% ;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -137,6 +138,7 @@ body {
         margin-top: 20px;
     }
 }
+
 
 .our-service {
     margin-top: 100px;
@@ -162,7 +164,7 @@ body {
     border-radius: 20%;
     box-shadow: 0 6px 10px rgba(0,0,0,0.3);
     width: 30%;
-    min-width: 250px;
+    min-width: 550px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -218,7 +220,7 @@ body {
         align-items: center;
     }
     .card {
-        width: 80%;
+        width:90%;
         margin-bottom: 20px;
     }
 }
@@ -248,12 +250,13 @@ body {
 }
 
 .section .info ul {
-    list-style-type: none;
+    
     padding: 0;
 }
 
 .section .info ul li {
     margin-bottom: 10px;
+    
 }
 
 @media (max-width: 768px) {
@@ -272,7 +275,9 @@ body {
     }
 }
 
-
+.section li{
+    text-decoration:dotted;
+}
 
 .card-grid {
     display: grid;
@@ -358,7 +363,6 @@ body {
 }
 
 .footer-column ul {
-    list-style-type: none;
     padding: 0;
 }
 
